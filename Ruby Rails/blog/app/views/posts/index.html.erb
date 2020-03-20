@@ -1,0 +1,48 @@
+
+<h2>LED Logger</h2>
+
+
+<div id=controller>
+  <h3>Controller</h3>
+  <%= link_to 'Turn LED On', led_on_path  %>
+  <br>
+  <%= link_to 'Turn LED Off', led_off_path %>
+  <br>
+  <%= link_to 'New Post', new_post_path%>
+  <br><br>
+
+  <h3>Flash Message</h3>
+
+  <% flash.each do |type, msg| %>
+    <div>
+      <%= msg %>
+    </div>
+  <% end %>
+
+</div>
+
+<div id=databse>
+  <table border = "1">
+    <tr>
+        <th>Title</th>
+        <th>Last Modified</th>
+        <th colspan="3">Action</th>
+    </tr>
+    <% @post.each do |post| %>
+        <tr>
+            <td><%= "#{post.title}" %></td>
+            <td><%= "#{post.updated_at}" %></td>
+            <td><%= link_to 'Show', post_path(post.id) %> </td>
+            <td><%= link_to 'Edit', edit_post_path(post.id) %> </td>
+            <td><%= link_to 'Delete', destroy_post_path(post.id), method: :delete, data:{confirm: "Are you sure you want to delete #{post.title}?"} %> </td>
+        </tr>
+        
+    <%end%>
+  </table>
+</div>
+
+
+
+
+  
+
