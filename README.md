@@ -3,7 +3,7 @@ This repository contains all the files for the LED Logger IOT project. The speci
 be viewed here: https://medium.com/@sauravkumar173/making-an-iot-using-esp8266-with-ruby-on-rails-server-side-edc5140cecf8
 
 
-##Installation
+## Installation
 
 This project uses Ruby on Rails and an Wemos D1 Mini board with ESP8266. This means that a Linux machine of WSL environment will be needed to host the server, and an Arduino IDE is necessary to flash the board.
 
@@ -12,9 +12,9 @@ This project uses Ruby on Rails and an Wemos D1 Mini board with ESP8266. This me
 3. Run the server with "rails -s -b 0.0.0.0"
 4. If the ESP8266 cannot connect to the Rails server, ensure the IP address, SSID and Password is correct to your setup
 
-##Usage
+## Usage
 On the local host IP, a HTML view will appear. The LED can be turned on or off from the control panel on the website and a log will be created with the time the LED state was changed.
 
-##Authors
+## Authors
 Saurav Kumar
 
